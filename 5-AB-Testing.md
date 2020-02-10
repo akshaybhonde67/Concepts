@@ -1,10 +1,9 @@
-
 ### A Summary of Udacity A/B Testing Course
 
-##### First, why do we do A/B tests?
+#### First, why do we do A/B tests?
 The answer is testing takes the guesswork out of website optimization and enables data-informed decisions that shift business conversations from “we think” to “we know.” By measuring the impact that changes have on your metrics, you can ensure that every change produces positive results. Nowadays it’s very common for companies to do A/B tests on web page versions, personalized recommendations and new features.<br>
 
-##### Can we test everything?
+#### Can we test everything?
 NO. There are situations we cannot analyze through A/B test. For example, if you are adding a new experience and want to test it, old users may resist against the new version (change aversion), or old users may all go for the new experience, then the test set has everything (novelty effect).<br>
 Two issues to consider when it comes to new experience: <br>
   (1) what is the base of your comparison? <br>
@@ -17,7 +16,7 @@ When A/B testing is not useful, we can:<br>
   4. Focus groups and surveys<br>
   5. Human evaluation<br>
 
-##### Then, how to do an A/B test?
+#### Then, how to do an A/B test?
 In practice, an A/B test can be summarized into the 5 steps below:<br>
   1. Choose and characterize metrics to evaluate your experiments, i.e. what do you care about, how do you want to measure the effect<br>
   2. Choose significance level (alpha), statistical power (1-beta) and practical significance level you really want to launch the change  if the test is statistically significant<br>
@@ -27,7 +26,7 @@ In practice, an A/B test can be summarized into the 5 steps below:<br>
 
 In this Udacity course, the five steps are expanded into detailed explanation with numerous real-world examples:<br>
 
-##### Step 1: Choose and characterize metrics for both sanity check and evaluation
+#### Step 1: Choose and characterize metrics for both sanity check and evaluation
 The metrics we choose for sanity check are called as invariant metrics. They are not supposed to be affected by the experiment. They should not change across control and treatment groups. Otherwise, the experiment setup is incorrect.<br>
 The evaluation metrics we choose are used to measure which variation is better. For example, we could use daily active users (DAU) to measure user engagement, use click through rate (CTR) to measure a button design on a webpage, etc. In general, there are four categories of metrics that you should keep in mind:<br>
   1. Sums and counts<br>
@@ -42,24 +41,24 @@ How to measure the sensitivity and robustness?<br>
   2. Use A/A test to see if metrics pick up difference (if yes, then the metric is not robust)<br>
   3. Retrospective analysis<br>
 
-##### Step 2: Choose significance level, statistical power and practical significance level
+#### Step 2: Choose significance level, statistical power and practical significance level
 Usually the significance level is 0.05 and power is set as 0.8. Practical significance level varies depends on each individual tests, it tells you how much change the test detects that makes you really want to launch the change. <br>
 You may not want to launch a change even if the test is statistically significant because you need to consider the business impact of the change, whether it is worthwhile to launch considering the engineering cost, customer support or sales issue, and opportunity costs.<br>
 
-##### Step 3: Calculate required sample size
+#### Step 3: Calculate required sample size
 Overview: Need to consider the choice of metric, the choice of unit of diversion, and the choice of population into account because they all affect the variability of your metrics. Then decide on the size of experiment.<br><br>
 Subject: What is the subject (unit of diversion) of the test? I.e. what are the units you are going to run the test on and comparing. Unit of diversion can be event based (e.g. pageview) or anonymous ID(e.g. cookie id) or user ID. These are commonly used unit of diversion. For user visible changes, you want to use user_id or cookie to measure the change. If measuring latency change, other metrics like event level diversion might be enough.<br><br>
 Population: What subjects are eligible for the test? Everyone? Only people in the US? Only people in certain industry?<br><br>
 How to reduce the size of an experiment to get it done faster? You can increase significance level alpha, or reduce power (1-beta) which means increase beta, or change the unit of diversion if originally it is not the same with unit of analysis (unit of analysis: denominator of your evaluation metric) .<br>
 
-##### Step 4: Take sample for control/treatment groups and run the test
+#### Step 4: Take sample for control/treatment groups and run the test
 Several things to keep in mind:<br>
 Duration: What’s the best time to run it? Students going back to college? Holidays? Weekend vs. weekdays?<br><br>
 Exposure: What fraction of traffic you want to expose the experiment to? Suggestion is take a small fraction, run multiple tests at the same time (different days: weekend, weekday, holiday).<br><br>
 Learning effect: When there’s a new change, in the beginning users may against the change or use the change a lot. But overtime, user behavior becomes stable, which is called plateau stage. The key thing to measure learning effect is time, but in reality you don’t have that much luxury of taking that much time to make a decision. <br><br>
 Suggestion: run on a smaller group of users, for a longer period of time.<br>
 
-##### Step 5: Analyze the results and draw conclusions
+#### Step 5: Analyze the results and draw conclusions
 First step, sanity check. <br>
 Before analyzing result the first step is to do sanity check — check if your invariant metrics have changed. If your sanity check failed, do not proceed. Instead, go analyze why your sanity check failed. <br>
 You can do either: <br>
@@ -102,7 +101,7 @@ Not only think about statistically significant but also business impact. Think a
 If you are running your first experiment that have a big impact, you might want to run a couple of experiments and check the results to see if you are comfortable launching it.<br><br>
 Other thing to consider: Politics and ethics for experiments<br><br>
 Experiments involves real people, it is important to protect the users and follow the ethics. However, there were many problematic examples of experiments in the past. For example, Tuskegee syphilis experiment, Milgram experiment in history and a recent Facebook emotion experiment. To conduct an A/B test in an ethical way, there are four principles to keep in mind:<br>
-  1.Risk: What risk are the participants exposed to?<br>
+  1. Risk: What risk are the participants exposed to?<br>
 The main threshold is whether the risk exceeds that of “minimal risk”. Minimal risk is defined as the probability and magnitude of harm that a participant would encounter in normal daily life. The harm considered encompasses physical, psychological and emotional, social, and economic concerns. If the risk exceeds minimal risk, then informed consent is required.<br>
   2. Benefit: What’s the potential benefit of the outcome of the study?<br>
 It is important to be able to state what the benefit would be from completing the study.<br>
