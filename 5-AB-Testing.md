@@ -109,3 +109,5 @@ It is important to be able to state what the benefit would be from completing th
 In online experiments, the issues to consider are what the other alternative services that a user might have, and what the switching costs might be, in terms of time, money, information, etc.<br>
   4. Privacy: What privacy do participants have?<br>
 For new data being collected and stored, how sensitive is the data and what are the internal safeguards for handling that data? Then, for that data, how will it be used and how will participants’ data be protected? How are participants guaranteed that their data, which was collected for use in the study, will not be used for some other purpose?<br>
+
+#### [ABTesting Tutorial](https://exp-platform.com/2017abtestingtutorial/)
