@@ -1,37 +1,47 @@
 
 ### A Summary of Udacity A/B Testing Course
 
-First, why do we do A/B tests?
-The answer is testing takes the guesswork out of website optimization and enables data-informed decisions that shift business conversations from “we think” to “we know.” By measuring the impact that changes have on your metrics, you can ensure that every change produces positive results. Nowadays it’s very common for companies to do A/B tests on web page versions, personalized recommendations and new features.
-Can we test everything?
-NO. There are situations we cannot analyze through A/B test. For example, if you are adding a new experience and want to test it, old users may resist against the new version (change aversion), or old users may all go for the new experience, then the test set has everything (novelty effect). Two issues to consider when it comes to new experience: (1) what is the base of your comparison? (2) how much time you need in order for your users to adapt to the new experience, so that you can actually say what is the plateaued experience and make a robust decision? Except for new experience, long term effect is hard to test too. For example, a home rental website test its referral effect, but a customer may not return even in six months, it’s very hard to measure through A/B testing. If this is the case, what shall we do?
-When A/B testing is not useful, we can:
-Analyze the user activity logs
-Conduct retrospective analysis
-Conduct user experience research
-Focus groups and surveys
-Human evaluation
-Then, how to do an A/B test?
-In practice, an A/B test can be summarized into the 5 steps below:
-Choose and characterize metrics to evaluate your experiments, i.e. what do you care about, how do you want to measure the effect
-Choose significance level (alpha), statistical power (1-beta) and practical significance level you really want to launch the change if the test is statistically significant
-Calculate required sample size
-Take sample for control/treatment groups and run the test
-Analyze the results and draw valid conclusions
-In this Udacity course, the five steps are expanded into detailed explanation with numerous real-world examples:
-Step 1: Choose and characterize metrics for both sanity check and evaluation
-The metrics we choose for sanity check are called as invariant metrics. They are not supposed to be affected by the experiment. They should not change across control and treatment groups. Otherwise, the experiment setup is incorrect.
-The evaluation metrics we choose are used to measure which variation is better. For example, we could use daily active users (DAU) to measure user engagement, use click through rate (CTR) to measure a button design on a webpage, etc. In general, there are four categories of metrics that you should keep in mind:
+##### First, why do we do A/B tests?
+<br>The answer is testing takes the guesswork out of website optimization and enables data-informed decisions that shift business conversations from “we think” to “we know.” By measuring the impact that changes have on your metrics, you can ensure that every change produces positive results. Nowadays it’s very common for companies to do A/B tests on web page versions, personalized recommendations and new features.<br>
 
-Sums and counts
-Distribution (mean, median, percentiles)
-Probability and rates (e.g. Click-through probability, Click-through rate)
-Ratios: any two numbers divide by each other
-Other than choosing the category of metrics, you should also consider sensitivity and robustness. You want to choose a metric that is has high sensitivity, that means the metric can pick up the change you care about. You also want the metric to be robust against changes you don’t care about. It means the metric doesn’t change a lot when nothing you’re interested happened. If a metric is too sensitive then it is not robust enough, thus there’s a balance between these two and you need to look into the data to find out which metric to use.
-How to measure the sensitivity and robustness?
-Run experiments
-Use A/A test to see if metrics pick up difference (if yes, then the metric is not robust)
-Retrospective analysis
+##### Can we test everything?
+<br>NO. There are situations we cannot analyze through A/B test. For example, if you are adding a new experience and want to test it, old users may resist against the new version (change aversion), or old users may all go for the new experience, then the test set has everything (novelty effect).<br>
+Two issues to consider when it comes to new experience: <br>
+(1) what is the base of your comparison? <br>
+(2) how much time you need in order for your users to adapt to the new experience, so that you can actually say what is the plateaued experience and make a robust decision? Except for new experience, long term effect is hard to test too. For example, a home rental website test its referral effect, but a customer may not return even in six months, it’s very hard to measure through A/B testing.<br>
+If this is the case, what shall we do?<br>
+When A/B testing is not useful, we can:<br>
+1. Analyze the user activity logs<br>
+2. Conduct retrospective analysis<br>
+3. Conduct user experience research<br>
+4. Focus groups and surveys<br>
+5. Human evaluation<br>
+
+##### Then, how to do an A/B test?
+<br>In practice, an A/B test can be summarized into the 5 steps below:<br>
+1. Choose and characterize metrics to evaluate your experiments, i.e. what do you care about, how do you want to measure the effect<br>
+2. Choose significance level (alpha), statistical power (1-beta) and practical significance level you really want to launch the change if the test is statistically significant<br>
+3. Calculate required sample size<br>
+4. Take sample for control/treatment groups and run the test<br>
+5. Analyze the results and draw valid conclusions<br>
+
+In this Udacity course, the five steps are expanded into detailed explanation with numerous real-world examples:<br>
+
+##### Step 1: Choose and characterize metrics for both sanity check and evaluation
+<br>The metrics we choose for sanity check are called as invariant metrics. They are not supposed to be affected by the experiment. They should not change across control and treatment groups. Otherwise, the experiment setup is incorrect.<br>
+The evaluation metrics we choose are used to measure which variation is better. For example, we could use daily active users (DAU) to measure user engagement, use click through rate (CTR) to measure a button design on a webpage, etc. In general, there are four categories of metrics that you should keep in mind:<br>
+1. Sums and counts<br>
+2. Distribution (mean, median, percentiles)<br>
+3. Probability and rates (e.g. Click-through probability, Click-through rate)<br>
+4. Ratios: any two numbers divide by each other<br>
+
+Other than choosing the category of metrics, you should also consider sensitivity and robustness. You want to choose a metric that is has high sensitivity, that means the metric can pick up the change you care about. You also want the metric to be robust against changes you don’t care about. It means the metric doesn’t change a lot when nothing you’re interested happened. If a metric is too sensitive then it is not robust enough, thus there’s a balance between these two and you need to look into the data to find out which metric to use.<br>
+
+How to measure the sensitivity and robustness?<br>
+1. Run experiments<br>
+2. Use A/A test to see if metrics pick up difference (if yes, then the metric is not robust)<br>
+3. Retrospective analysis<br>
+
 Step 2: Choose significance level, statistical power and practical significance level
 Usually the significance level is 0.05 and power is set as 0.8. Practical significance level varies depends on each individual tests, it tells you how much change the test detects that makes you really want to launch the change. You may not want to launch a change even if the test is statistically significant because you need to consider the business impact of the change, whether it is worthwhile to launch considering the engineering cost, customer support or sales issue, and opportunity costs.
 Step 3: Calculate required sample size
